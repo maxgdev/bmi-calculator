@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## BMI (Body Mass Index) Calaculator
+## BMI (Body Mass Index) Calculator
 
 This React app calculates the BMI value given the height and weight of a person.
 
