@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-// https://www.ramsayhealth.co.uk/weight-loss-surgery/bmi/bmi-formula
-// If you are 175cm (1.75m) in height and 75kg in weight, you can calculate your BMI as follows:
-// 75kg / (1.75m²) = 24.49kg/m²
 
-export default function OutputBMI() {
-    const [bmi, setBMI] = useState('');
-    let height = 1.75;
-    let weight = 75;
+
+export default function OutputBMI({ height, weight }) {
     return (
         <>
             <h2>BMI Value</h2>

@@ -1,6 +1,6 @@
 import React, { useState } from  "react";
 
-export default function GetInputs() {
+export default function GetInputs({}) {
     const [height, setHeight] = useState('');
     const [weight, setWeight] = useState('');
 
