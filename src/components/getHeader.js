@@ -4,7 +4,7 @@ export default function GetHeader() {
     return (
         <>
             <h1>BMI Calculator</h1>
-            <p>Body Mass Index Calsulator</p>
+            <p>Body Mass Index Calculator</p>
             <p>Input your height and weight to obtain yor BMI</p>
         </>
     )
