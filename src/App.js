@@ -10,19 +10,36 @@ import './App.css';
 
 function App() {
 
+  const [height, setHeight] = useState(1.75);
+  const [weight, setWeight] = useState(85);
   const [bmi, setBMI] = useState('');
-  let height = 1.75;
-  let weight = 75;
+  // let height = 1.75;
+  // let weight = 85;
+  
+  function setHeightFn(height) {
+    setHeight(height);
+    return height;
+  }
+
+  function setWeightFn(weight) {
+    setWeight(weight);
+    return weight;
+  }
+
+  function setBMIFn(height, weight) {
+    setBMI((weight / (height * height)).toFixed(2));
+    return bmi;
+  }
 
   useEffect(()=> {
-    setBMI((weight / (height * height)).toFixed(2));
+    
   }, [])
 
   return (
     <div className="App">
       <GetHeader />
-      <GetInput />
-      <OutputBMI height={height} weight={weight} bmiValue={bmi}/>
+      <GetInput height={height} weight={weight} hfn={setHeightFn} wfn={setWeightFn}/>
+      <OutputBMI height={height} weight={weight} bmiFn={setBMIFn}/>
     </div>
   );
 }

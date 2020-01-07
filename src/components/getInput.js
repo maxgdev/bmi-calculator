@@ -1,8 +1,6 @@
-import React, { useState } from  "react";
+import React from  "react";
 
-export default function GetInputs({}) {
-    const [height, setHeight] = useState('');
-    const [weight, setWeight] = useState('');
+export default function GetInputs({ height, weight, hfn, wfn}) {
 
     return (
         <>
@@ -12,7 +10,7 @@ export default function GetInputs({}) {
                     placeholder="Height"
                     name="height"
                     value={height}
-                    onChange={e => setHeight(e.target.value)}
+                    onChange={e => hfn(e.target.value)}
                 />
             <p>Enter weight</p>
             <input
@@ -20,7 +18,7 @@ export default function GetInputs({}) {
                     placeholder="Weight"
                     name="weight"
                     value={weight}
-                    onChange={e => setWeight(e.target.value)}
+                    onChange={e => wfn(e.target.value)}
                 />
         </>
     )
