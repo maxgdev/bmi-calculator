@@ -24,9 +24,12 @@ function App() {
     return weight;
   }
 
+  function calculateBMI(weight, height) {
+    return (weight / (height * height)).toFixed(2);
+  }
 
   useEffect(()=> {
-    setBMI((weight / (height * height)).toFixed(2));
+    setBMI(calculateBMI(weight, height));
   }, [weight, height])
 
   return (
