@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function OutputBMI({ height, weight, bmiValue }) {
-    let bmiTest = 24.5;
+    let bmiTest = 24.5; // Dummy test values
 
     function displayBMIStatus(){
         let bmiStatus = '';
