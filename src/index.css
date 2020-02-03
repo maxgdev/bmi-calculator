@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App p {
+  margin: 0 0.75em;
+}
+.inputClass {
+  margin-top: 15px;
+}

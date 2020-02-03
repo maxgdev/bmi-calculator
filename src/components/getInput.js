@@ -3,7 +3,7 @@ import React from  "react";
 export default function GetInputs({ height, weight, hfn, wfn}) {
 
     return (
-        <>
+        <div className='inputClass'>
             <p>Enter height</p>
                 <input
                     type="number"
@@ -20,6 +20,6 @@ export default function GetInputs({ height, weight, hfn, wfn}) {
                     value={weight}
                     onChange={e => wfn(e.target.value)}
                 />
-        </>
+        </div>
     )
 }
