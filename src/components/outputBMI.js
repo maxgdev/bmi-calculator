@@ -1,15 +1,15 @@
 import React from 'react';
 
 export default function OutputBMI({ height, weight, bmiValue }) {
-    let bmiTest = 24.5; // Dummy test values
+    let bmiTest = 17.5; // Dummy test values
 
-    function displayBMIStatus(){
+    function displayBMIStatus(bmiValue){
         let bmiStatus = '';
-        if (bmiTest > 50) {
+        if (bmiValue > 29.9) {
             bmiStatus = 'Obese';
-        } else if (bmiTest > 40){
+        } else if (bmiValue > 25){
             bmiStatus = 'Overweight';
-        } else if(bmiTest > 22) {
+        } else if(bmiValue > 18.4) {
             bmiStatus = 'the correct weight';
         } else {
             bmiStatus = 'Underweight';
@@ -19,7 +19,7 @@ export default function OutputBMI({ height, weight, bmiValue }) {
     return (
         <>
             <h2>BMI Value: {bmiValue}</h2>
-            <strong>{`Your are ${displayBMIStatus()}`}</strong>
+            <strong>{`Your are ${displayBMIStatus(bmiValue)}`}</strong>
             <p>Based on height of {height * 100}cm and weight of {weight} kg</p>
             <p>Based on height of {(height * 100 * 0.0328084).toFixed(2)} feet and weight of  { (weight * 2.204).toFixed(2)} lbs</p>
         </>
