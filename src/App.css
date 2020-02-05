@@ -15,3 +15,13 @@
   font-size: larger;
 
 }
+
+.Ideal {
+  color: green;
+}
+.Underweight, .Overweight {
+  color: orange;
+}
+.Obese {
+  color: red;
+}
