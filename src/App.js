@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
 
-  const [height, setHeight] = useState(1.75);
+  const [height, setHeight] = useState(175);
   const [weight, setWeight] = useState(85);
   const [bmi, setBMI] = useState('');
   
@@ -25,7 +25,8 @@ function App() {
   }
 
   function calculateBMI(weight, height) {
-    return (weight / (height * height)).toFixed(2);
+    let mHeight = height /100;
+    return (weight / (mHeight * mHeight)).toFixed(2);
   }
 
   useEffect(()=> {
