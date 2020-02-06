@@ -4,7 +4,7 @@ export default function GetInputs({ height, weight, hfn, wfn}) {
 
     return (
         <div className='inputClass'>
-            <p>Enter height</p>
+            <p>Enter height (cm)</p>
                 <input
                     type="number"
                     placeholder="Height"
@@ -12,7 +12,7 @@ export default function GetInputs({ height, weight, hfn, wfn}) {
                     value={height}
                     onChange={e => hfn(e.target.value)}
                 />
-            <p>Enter weight</p>
+            <p>Enter weight (kg)</p>
             <input
                     type="number"
                     placeholder="Weight"
