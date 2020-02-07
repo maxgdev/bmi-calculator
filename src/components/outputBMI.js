@@ -17,7 +17,7 @@ export default function OutputBMI({ height, weight, bmiValue }) {
     }
     return (
         <>
-            <h2>BMI Value: {bmiValue}</h2>
+            <h2  className={displayBMIStatus(bmiValue)}>BMI Value: {bmiValue}</h2>
             <strong className={displayBMIStatus(bmiValue)}>{`Your are ${displayBMIStatus(bmiValue)}`}</strong>
             <p>Based on height of {height}cm and weight of {weight} kg</p>
             <p>Based on height of {(height * 0.0328084).toFixed(2)} feet and weight of  { (weight * 2.204).toFixed(2)} lbs</p>
