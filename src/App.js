@@ -35,9 +35,11 @@ function App() {
 
   return (
     <div className="App">
-      <GetHeader />
-      <GetInput height={height} weight={weight} hfn={setHeightFn} wfn={setWeightFn}/>
-      <OutputBMI height={height} weight={weight} bmiValue={bmi}/>
+      <div className="bmiCard">
+        <GetHeader />
+        <GetInput height={height} weight={weight} hfn={setHeightFn} wfn={setWeightFn}/>
+        <OutputBMI height={height} weight={weight} bmiValue={bmi}/>
+      </div>
     </div>
   );
 }

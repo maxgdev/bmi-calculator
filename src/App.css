@@ -8,6 +8,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .bmivalue {
@@ -24,4 +25,11 @@
 }
 .Obese {
   color: red;
+}
+.bmiCard {
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  border: 1px solid white;;
 }
