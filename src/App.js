@@ -10,8 +10,8 @@ import './App.css';
 
 function App() {
 
-  const [height, setHeight] = useState(175);
-  const [weight, setWeight] = useState(85);
+  const [height, setHeight] = useState(182);
+  const [weight, setWeight] = useState(82);
   const [bmi, setBMI] = useState('');
   
   function setHeightFn(height) {
