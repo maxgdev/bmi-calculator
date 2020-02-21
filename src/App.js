@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import GetHeader from './components/getHeader';
-import GetInput from './components/getInput';
-import OutputBMI from './components/outputBMI';
+import GetHeader            from './components/getHeader';
+import GetInput             from './components/getInput';
+import OutputBMI            from './components/outputBMI';
+import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
+import AppBar               from 'material-ui/AppBar'
 import './App.css';
 
 // https://www.ramsayhealth.co.uk/weight-loss-surgery/bmi/bmi-formula
@@ -34,13 +36,17 @@ function App() {
   }, [weight, height])
 
   return (
-    <div className="App">
-      <div className="bmiCard">
-        <GetHeader />
-        <GetInput height={height} weight={weight} hfn={setHeightFn} wfn={setWeightFn}/>
-        <OutputBMI height={height} weight={weight} bmiValue={bmi}/>
+    <MuiThemeProvider>
+      <div className="App">
+        <AppBar title="BMI Calculator"/>  
+        <div className="bmiCard">
+          <GetHeader />
+          <GetInput height={height} weight={weight} hfn={setHeightFn} wfn={setWeightFn}/>
+          <OutputBMI height={height} weight={weight} bmiValue={bmi}/>
+        </div>
       </div>
-    </div>
+    </MuiThemeProvider>
+
   );
 }
 
