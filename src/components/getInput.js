@@ -1,25 +1,27 @@
 import React from  "react";
+import TextField from '@material-ui/core/TextField';
 
 export default function GetInputs({ height, weight, hfn, wfn}) {
-
     return (
         <div className='inputClass'>
-            <p>Enter height (cm)</p>
-                <input
-                    type="number"
-                    placeholder="Height"
-                    name="height"
-                    value={height}
-                    onChange={e => hfn(e.target.value)}
-                />
+            <TextField 
+                type="number"
+                label="Height (cm)"  
+                fullWidth={false}
+                name="height"
+                value={height}
+                onChange={e => hfn(e.target.value)}
+            />
+
             <p>Enter weight (kg)</p>
-            <input
-                    type="number"
-                    placeholder="Weight"
-                    name="weight"
-                    value={weight}
-                    onChange={e => wfn(e.target.value)}
-                />
+            <br />
+            <TextField 
+               type="number"
+               label="Weight (Kg)"
+               name="weight"
+               value={weight}
+               onChange={e => wfn(e.target.value)}
+            />
         </div>
     )
 }

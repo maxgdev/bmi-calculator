@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #282c34;
+  /* background-color: #282c34; */
 }
 .bmivalue {
   font-weight: 600;
@@ -23,7 +23,7 @@ body {
   padding-top: 20px;
   padding-bottom: 50px;
   border: 1px solid white;
-  color: white;
+  /* color: white; */
   font-size: calc(10px + 2vmin);
 }
 .inputClass input {
