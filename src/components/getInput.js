@@ -12,9 +12,8 @@ export default function GetInputs({ height, weight, hfn, wfn}) {
                 value={height}
                 onChange={e => hfn(e.target.value)}
             />
-
-            <p>Enter weight (kg)</p>
-            <br />
+            <div className="divider">
+            </div>
             <TextField 
                type="number"
                label="Weight (Kg)"
