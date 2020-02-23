@@ -23,7 +23,6 @@ export default function OutputBMI({ height, weight, bmiValue }) {
             </h3>
             <p>Based on height of {height}cm ({(height * 0.0328084).toFixed(2)} feet)</p>
             <p>Based on weight of {weight} kg ({ (weight * 2.204).toFixed(2)} lbs)</p>
-            {/* <p>Based on height of {(height * 0.0328084).toFixed(2)} feet and weight of  { (weight * 2.204).toFixed(2)} lbs</p> */}
         </>
     )
 }
