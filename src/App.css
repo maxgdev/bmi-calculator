@@ -18,7 +18,7 @@ body {
   color: red;
 }
 .bmiCard {
-  margin: 50px auto;
+  margin: 20px auto;
   width: 50%;
   padding-top: 20px;
   padding-bottom: 50px;
@@ -39,4 +39,9 @@ body {
 }
 .divider {
   margin: 20px;
+}
+
+.MuiPaper-root.MuiPaper-elevation3 {
+  background-color: #ededed;
+  padding-bottom: 10px;
 }

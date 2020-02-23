@@ -4,6 +4,7 @@ import GetInput             from './components/getInput';
 import OutputBMI            from './components/outputBMI';
 import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
 import AppBar               from 'material-ui/AppBar'
+import Paper                from '@material-ui/core/Paper'
 import './App.css';
 
 // https://www.ramsayhealth.co.uk/weight-loss-surgery/bmi/bmi-formula
@@ -38,12 +39,20 @@ function App() {
   return (
     <MuiThemeProvider>
       <div className="App">
-        <AppBar title="BMI Calculator"/>  
-        <div className="bmiCard">
-          <GetHeader />
-          <GetInput height={height} weight={weight} hfn={setHeightFn} wfn={setWeightFn}/>
-          <OutputBMI height={height} weight={weight} bmiValue={bmi}/>
-        </div>
+        <AppBar title="BMI Calculator"/> 
+          
+            <div className="bmiCard">
+              <Paper elevation={3}>
+                <GetHeader />
+              </Paper>
+              <Paper  elevation={3}>
+                <GetInput height={height} weight={weight} hfn={setHeightFn} wfn={setWeightFn}/>  
+              </Paper>
+              <Paper  elevation={3}>
+                <OutputBMI height={height} weight={weight} bmiValue={bmi}/>
+              </Paper>
+            </div>
+         
       </div>
     </MuiThemeProvider>
 
